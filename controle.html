@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Estoque</title>
+    <link rel="stylesheet" href="./controle.css">
+</head>
+<body>
+    
+<main class="tudo">
+    <section class="cabeçario">
+        <div class="titulo">
+            <ion-icon name="restaurant"></ion-icon>
+            <h1>Quent<span>inhas </span><br>Do<br><span>Gr</span>au</h1>
+        </div>
+
+        <div class="opcao">
+            <ion-icon name="home"></ion-icon>
+            <a href="">Inicio</a>
+        </div>
+    </section>
+
+    <section class="inicio">
+        <div class="produtos">
+            <h1>Produtos</h1>
+            <button class="novoP"><ion-icon name="add-outline"></ion-icon>Novo produto</button>
+        </div>
+
+        <div class="tabela">
+
+            <div class="editar">
+                <div class="novos">
+                    <button class="novoPr"><ion-icon name="add-outline"></ion-icon>Novo produto</button>
+                    <ion-icon name="trash-outline"></ion-icon>
+                    <ion-icon name="pencil-outline"></ion-icon>
+                </div>
+                <div class="pesquisa">
+                    <input style='flex:1' placeholder="PESQUISAR..." autofocus id='inputPesquisa' />
+                    <ion-icon name="search-outline"></ion-icon>
+                </div>
+            </div>
+            
+            <div id="saida">
+                <table  border="0" width="100%" height="5%">
+                    <tr>
+                        <td>
+                            Cod
+                        </td>
+                        
+                        <td>
+                            Produto
+                        </td>
+
+                        <td>
+                            Categoria
+                        </td>
+    
+                        <td>
+                            Preço venda
+                        </td>
+    
+                        <td>
+                            Estoque
+                        </td>
+                    </tr>                    
+        </table>
+            </div>
+
+        </div>
+    </section>
+</main>
+
+
+
+    <div class="popup-wrapper">
+        <div class="popup">
+            <div class="popup-close">X</div>
+            <div class="popup-content" id="wrap">
+                <!--<input type="text" placeholder="Cod">-->
+                <form id="form" class="form">
+                    <div class="primeiraL">
+                        <label>Produto</label>
+                        <input class="inputs required" type="text" id="campo1" placeholder="Nome do produto" oninput="nameValidate()">
+                        <span class="span-required">Nome deve ter no minimo 3 caracteres</span>
+                        <label>Categoria</label>
+                        <input class="inputs required" type="text" id="campo2" placeholder="Categoria" oninput="CateValidate()">
+                        <span class="span-required">Digite a categoria</span>
+                    </div>
+                    <div class="segundaL">
+                        <label>Preço</label>
+                        <input class="inputs inputs required" type="number" id="campo3" placeholder="Preço Venda" oninput="PrecoValidate()">
+                        <span class="span-required">Digite o preço do produto</span>
+                        <label>Estoque</label>
+                        <input class="inputs required" type="number" id="campo4" placeholder="Quantidade" oninput="QtdValidate()">
+                        <span class="span-required">Digite a quantidade</span>
+                    </div>
+        
+                    <div class="cadastro">
+                        <button id="enviar" type="submit">Cadastrar</button>
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+
+
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+
+:root {
+    --verde: #27ae60;
+    --laranja: #ff3838;
+    --preto: #192a56;
+    --cor_clara: #666;
+    --box-shadow: 0.5rem 1.5rem rgba(0, 0, 0, .1);
+}
+
+.tudo {
+    display: flex;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+.cabeçario {
+    background-color: black;
+    width: 20%;
+    height: 100%;
+}
+
+.inicio {
+    width: 100%;
+    color: #fff;
+    background: rgb(239, 239, 239);
+}
+
+.produtos {
+    display: flex;
+    background: var(--laranja);
+    padding: 20px;
+}
+
+.produtos button {
+  background: #fff;
+  border-radius: 5px;
+  color: var(--preto);
+  padding: .5rem;
+  cursor: pointer;
+  border: none;
+  transition: 0.5s ease;
+}
+
+.produtos button:hover {
+  background: var(--preto);
+  color: #fff;
+}
+
+.produtos ion-icon {
+    position: relative;
+    top: 3px;
+    font-size: 1rem;
+}
+
+.titulo h1 {
+    color: white;
+    text-align: center;
+}
+
+.titulo h1 span {
+    color: var(--laranja);
+}
+
+.titulo{
+    display: flex;
+    margin: 20px;
+}
+
+.titulo ion-icon{
+    color: var(--laranja);
+    font-size: 85px;
+}
+
+.opcao ion-icon{
+    color: #ffffff;
+    font-size: 25px;
+}
+
+.opcao a{
+    text-decoration: none;
+    color: var(--laranja);
+    font-size: 25px;
+    transition: 0.5s;
+}
+
+.opcao a:hover{
+    background: #ff3838;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.opcao{
+    margin-top: 50px;
+    margin-left: 25px;
+}
+
+table{
+    border: solid var(--preto);
+    background-color: #fff;
+    color: var(--preto);
+    width: 39.9rem;
+    margin-top: 5rem;
+    padding: 5px;
+}
+td {
+  padding: 8px;
+}
+
+td ion-icon {
+  transition: 0.5s ease;
+}
+
+td ion-icon:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.editar {
+  display: flex;
+  position: relative;
+  top: 80px;
+  width: 37.2rem;
+  border-top: solid var(--preto);
+  border-left: solid var(--preto);
+  border-right: solid var(--preto);
+  padding: 20px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.editar ion-icon {
+  color: #192a56;
+  position: relative;
+  top: 3px;
+}
+
+.novos {
+  position: relative;
+  right: 60px;
+}
+
+.novos button {
+  background: var(--preto);
+    border-radius: 5px;
+    color: #fff;
+    padding: .5rem;
+    cursor: pointer;
+    border: none;
+    transition: 0.5s ease;
+}
+
+.novos button:hover {
+  background: var(--laranja);
+  color: #fff;
+}
+
+.novos button ion-icon {
+  color: #fff;
+  font-size: 1rem;
+}
+
+.novos button:hover ion-icon {
+  color: #fff;
+}
+
+.novos ion-icon {
+  transition: 0.5s ease;
+}
+
+.novos ion-icon:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.pesquisa input {
+  outline: none;
+    border: none;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 2px;
+    width: 180px;
+}
+
+.pesquisa ion-icon {
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.popup-wrapper {
+    display: none;
+    background: rgba(231, 231, 231, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .popup {
+    font-family: Arial;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    margin: 10% auto;
+    padding: 20px;
+    background: rgb(206, 205, 205);
+    color: #fff;
+    position: relative;
+    top: -10px;
+    left: 7rem;
+    border-radius: 5px;
+    border: 2px solid var(--preto);
+  }
+  
+  .popup a {
+    color: white;
+    cursor: pointer;
+    padding: 6px 10px;
+    text-decoration: none;
+    background: crimson;
+  }
+  
+  .popup-close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    color: var(--preto);
+    transition: 0.5s ease;
+  }
+
+  .popup-close:hover {
+    transform: scale(1.2);
+  }
+
+  .popup-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .primeiraL {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .primeiraL input {
+    outline: none;
+    border: none;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 2px;
+    width: 250px;
+  }
+
+  .primeiraL label {
+    margin-left: 0;
+    margin-bottom: 2px;
+  }
+
+  .segundaL {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-top: -10px;
+  }
+
+  .segundaL input {
+    outline: none;
+    border: none;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    width: 250px;
+  }
+
+  #form input:focus {
+    border: 1.8px solid var(--preto);
+  }
+
+  .segundaL label {
+    margin-left: 0;
+    margin-bottom: 5px;
+  }
+
+  #form label {
+    color: var(--preto);
+  }
+
+  .cadastro button {
+    background: #fff;
+    color: var(--preto);
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .cadastro button:hover {
+    background: var(--preto);
+    color: #fff;
+  }
+
+  .span-required {
+    color: #ba0404;
+    font-size: 12px;
+    margin-left: 0;
+    margin-bottom: 10px;
+    margin-top: -10px;
+    display: none;
+  }
